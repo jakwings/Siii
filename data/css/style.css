@@ -1,0 +1,359 @@
+@-ms-viewport {
+  zoom: 1.0;
+  width: auto;
+}
+@viewport {
+  zoom: 1.0;
+  width: auto;
+}
+
+/*******************************************************************************
+ * icomoon.io
+ */
+@font-face {
+  font-family: "icomoon";
+  src: url(../fonts/icomoon.eot?-pj1bbk);
+  src: url(../fonts/icomoon.eot?#iefix-pj1bbk) format("embedded-opentype"),
+       url(../fonts/icomoon.woff?-pj1bbk) format("woff"),
+       url(../fonts/icomoon.ttf?-pj1bbk) format("truetype"),
+       url(../fonts/icomoon.svg?-pj1bbk#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+	font-family: "icomoon";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-home:before {
+	content: "\e600";
+}
+.icon-quotes-left:before {
+	content: "\e601";
+}
+.icon-feather:before {
+	content: "\e602";
+}
+.icon-feed:before {
+	content: "\e60e";
+}
+.icon-arrow-left2:before {
+	content: "\e617";
+}
+.icon-arrow-down2:before {
+	content: "\e618";
+}
+.icon-arrow-up2:before {
+	content: "\e619";
+}
+.icon-arrow-right2:before {
+	content: "\e61a";
+}
+.icon-arrow-left3:before {
+	content: "\e61b";
+}
+.icon-arrow-down3:before {
+	content: "\e61c";
+}
+.icon-arrow-up3:before {
+	content: "\e61d";
+}
+.icon-arrow-right3:before {
+	content: "\e61e";
+}
+
+/*******************************************************************************
+ * Monospace fonts for mobile phones
+ */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine'), url(../fonts/Cousine.woff) format('woff');
+}
+@font-face {
+  font-family: 'Cousine';
+  font-style: bolder;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(../fonts/CousineBold.woff) format('woff');
+}
+
+/*******************************************************************************
+ * Fonts for titles
+ */
+@font-face {
+  font-family: 'Lancelot';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lancelot'), url(../fonts/Lancelot.woff2) format('woff2'), url(../fonts/Lancelot.woff) format('woff');
+}
+
+
+/*******************************************************************************
+ * Blog
+ */
+body {
+  padding: 0.5em;
+  color: #737373;
+  font-size: 14px;
+  font-family: "Source Han Sans TC", "Source Han Sans SC", "Source Han Sans J", "Source Han Sans K", "Hiragino Kaku Gothic ProN", "Hiragino Sans GB", "Wenquanyi Micro Hei", "Microsoft YaHei", "微软雅黑", "Tahoma", sans-serif, "Apple Color Emoji";
+  /*background-image: url(../img/peterchondesign.com.png);*/
+}
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+a:link { color: #0074d9; }
+a:visited { color: #4c4c4c; }
+/*a:hover { color: #15B7E7; }*/
+a:hover { color: #0074d9; }
+a:active { color: #ff4136; }
+pre, code, samp, kbd, var {
+  font-family: "Courier New", "Cousine", monospace;
+  padding: 1px 0.2em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+}
+code, samp, kbd, var {
+  white-space: pre-wrap;
+  word-break: break-all;
+  border-radius: 2px;
+}
+pre *, code * {
+  background-color: transparent;
+}
+pre * {
+  white-space: pre;
+  overflow: auto;
+}
+.clearfix::before,
+.clearfix::after {
+  content: ".";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.clearfix::after {
+  clear: both;
+}
+.pager ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pager li {
+  display: inline-block;
+}
+.pager .previous {
+  display: block;
+  float: left;
+  text-align: left;
+}
+.pager .next {
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.blog>.header,
+.blog>.footer,
+.blog>.body,
+.blog>.navigator>* {
+  max-width: 916px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.blog>.navigator {
+  margin-bottom: 1em;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.05);
+  line-height: 2;
+  font-size: 1.1em;
+  overflow: hidden;
+}
+.blog>.navigator a:not(:hover) {
+  color: inherit;
+}
+.blog>.navigator ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.blog>.navigator li {
+  display: inline-block;
+  margin: 0;
+}
+.blog>.navigator a {
+  padding: 0.5em 0 0.5em 0.5em;
+}
+
+.blog>.header {
+  padding: 0.5em 0;
+}
+.blog>.header .title {
+  font-size: 4em;
+  font-family: "Lancelot", "Arial", sans-serif, "Apple Color Emoji";
+}
+.blog>.header .title a {
+  display: block;
+  color: inherit;
+}
+.blog>.header .subtitle {
+  font-size: 1em;
+  margin-left: 1em;
+}
+.blog>.footer {
+  margin-top: 2em;
+  color: #ababab;
+}
+.blog>.footer a {
+  color: inherit;
+}
+.blog>.footer .license {
+  text-align: right;
+  font-size: 0.8em;
+}
+
+.blog>.footer .license,
+.timeline,
+.article {
+  max-width: 40em;
+  max-width: 40rem;
+  padding: 0.5em;
+}
+
+.pager [class^="icon-"],
+.pager [class*=" icon"] {
+  vertical-align: middle;
+}
+
+.timeline .event .title {
+  font-size: 1.3em;
+  color: #4c4c4c;
+}
+.timeline .event .title .date {
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-size: 0.7em;
+  color: #777;
+}
+.timeline .event .title a {
+  display: block;
+}
+.timeline .event .title a:not(:hover) {
+  color: inherit;
+}
+.timeline .event .description a {
+  border-bottom: 1px dotted;
+}
+.timeline .event .description img {
+  max-width: 100%;
+  background: rgba(165, 165, 165, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.timeline .pager {
+  margin-top: 1em;
+}
+.timeline .pager .previous,
+.timeline .pager .next {
+  width: 50%;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 2em;
+}
+.timeline .pager .previous a,
+.timeline .pager .next a {
+  display: block;
+}
+
+.article {
+  color: #333;
+}
+.article .title {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-bottom: 0.67em;
+}
+.article .title a {
+  color: inherit;
+}
+.article .date {
+  font-size: 0.8em;
+  color: #aaa;
+}
+.article .date a:not(:hover) {
+  color: inherit;
+}
+
+article p {
+  /*text-align: justify;*/
+  /*text-justify: inter-word;*/
+  /*-moz-text-align-last: auto;*/
+  /*text-align-last: auto;*/
+}
+article a {
+  border-bottom: 1px dotted;
+}
+article a[href^="http"] {
+  word-break: break-all;
+}
+article blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-left: 6px double rgba(32, 155, 178, 0.1);
+}
+article img {
+  max-width: 100%;
+  background: rgba(165, 165, 165, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.article .pager {
+  margin-top: 1em;
+}
+.article .pager .previous,
+.article .pager .next {
+  width: 50%;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1em
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.article .pager .previous:hover,
+.article .pager .next:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.article .pager .previous a,
+.article .pager .next a {
+  display: block;
+}

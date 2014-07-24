@@ -1,0 +1,6 @@
+/.htaccess
+/cache/*.cache
+/database/*.row
+/database/*.col
+/feed.xml
+/sitemap.xml
