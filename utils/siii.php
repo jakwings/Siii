@@ -38,6 +38,7 @@ class Siii
         $cache_id = md5($uri) . '.cache';
         $this->mCacheFile = $this->GetSecurePath($this->mDirCache . $cache_id);
 
+        // These instructions must be in this execution order.
         $this->_ReadConfigFile();
         $this->_CheckHtaccess();
         $this->_SetupTimelines(!$this->mCacheEnabled);
@@ -314,7 +315,6 @@ class Siii
             } else {
                 return;
             }
-            return;
         }
         require_once 'class-sitemap.php';
         $build_date = $this->mDB->Max($this->mDbTableName, 'time', TRUE);
