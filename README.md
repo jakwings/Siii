@@ -25,7 +25,7 @@ Disqus或多說評論的代碼可直接复製到 `Siii/templates/article/comment
 
 ### 强制清空緩存的方法
 
-假如你覺得一切穩定了，在 `Siii/config/config.toml` 開啓緩存功能以後，可隨時上傳 `Siii/cmd_clear_cache` 文件即可（任意內容）。
+假如你覺得一切穩定了，在 `Siii/config/config.toml` 開啓緩存功能以後，隨時上傳 `Siii/cmd_clear_cache` 文件（任意內容）並訪問博客首頁即可。
 
 ### 各文件（夾）的用途
 
@@ -33,17 +33,18 @@ Disqus或多說評論的代碼可直接复製到 `Siii/templates/article/comment
 Siii/
     |- .htaccess            用於URL重寫的Apache配置文件（自動生成）
     |- */.htaccess          用於禁止非法訪問
-    |- cache/               存放網頁緩存文件（自動生成）
+    |- cache/*.cache        網頁緩存文件（自動生成）
     |- config/
              |- config.toml 以TOML 0.2爲語法的配置文件
     |- cmd_clear_cache      用於强制清空緩存的任意文件
-    |- data/                網頁所用的各種資源
+    |- data/*               網頁所用的各種資源
+    |- database/*           數據據文件（文本格式）
     |- favicon.ico          網站圖標
     |- feed.xml             博客的RSS/Atom訂閱文件（自動生成）
     |- files/*.md           各文章的Markdown源文件（Parsedown語法）
     |- index.php            一切頁面的入口
     |- sitemap.xml          可提交給Google Webmaster站長工具（自動生成）
-    |- templates/           網頁模板
+    |- templates/*          網頁模板
     |- utils/*              核心文件，不解釋
 ```
 
