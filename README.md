@@ -25,9 +25,7 @@ Disqus或多說評論的代碼可直接复製到 `Siii/templates/article/comment
 
 ### 强制清空緩存的方法
 
-假如你覺得一切穩定了
-
-上傳 `Siii/cmd_clear_cache` 文件即可（任意內容）。
+假如你覺得一切穩定了，在 `Siii/config/config.toml` 開啓緩存功能以後，可隨時上傳 `Siii/cmd_clear_cache` 文件即可（任意內容）。
 
 ### 各文件（夾）的用途
 
