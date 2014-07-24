@@ -4,9 +4,8 @@ $root = $blog->EscapeHtml(rtrim($blog->GetMetadata('path'), '/'));
 $title = $blog->GetMetadata('title', TRUE);
 ?>
 <!DOCTYPE html>
-<html lang="zh-tw" dir="ltr">
+<html>
   <head>
-    <meta name="google-site-verification" content="Rv9ku3LmdZ_4vJr1z5TTOEs5wUMtwGxmivrUkOLK2aA" />
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1">
     <?php $blog->Load('head-title', $data) ?>
