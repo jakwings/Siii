@@ -117,6 +117,14 @@ class Renderer
         return htmlentities($text, $flag, 'UTF-8');
     }
 
+    public function EncodeUrl($url, $keepSlashes = FALSE)
+    {
+        if (!$keepSlashes) {
+            return rawurlencode($url);
+        }
+        return implode('/', array_map('rawurlencode', explode('/', $url)));
+    }
+
     public function ParseMarkup($source)
     {
         require_once 'class-parsedown.php';

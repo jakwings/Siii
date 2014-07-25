@@ -106,6 +106,14 @@ class Siii
         return htmlentities($text, $flag, 'UTF-8');
     }
 
+    public function EncodeUrl($url, $keepSlashes = FALSE)
+    {
+        if (!$keepSlashes) {
+            return rawurlencode($url);
+        }
+        return implode('/', array_map('rawurlencode', explode('/', $url)));
+    }
+
     public function FindCache($blog)
     {
         $cmd_file = $this->mDirRoot . 'cmd_clear_cache';
@@ -328,7 +336,7 @@ class Siii
         ), TRUE);
         foreach ($events as $event) {
           $date = $event['time'];
-          $link = $homepage . rawurlencode($event['slug']) . '.html';
+          $link = $homepage . $this->EncodeUrl($event['slug'], TRUE) . '.html';
           $sitemap->AddUrl($link, 'weekly', 0.9, $date);
         }
         ignore_user_abort(TRUE);
@@ -369,8 +377,8 @@ class Siii
             $description = $this->ParseMarkup($event['content']);
             $feed->AddItem(array(
                 'title' => $event['title'],
-                'link' => $homepage . rawurlencode($slug) . '.html',
-                'guid' => $homepage . rawurlencode($slug) . '.html',
+                'link' => $homepage . $this->EncodeUrl($slug, TRUE) . '.html',
+                'guid' => $homepage . $this->EncodeUrl($slug, TRUE) . '.html',
                 'pubDate' => $event['time'],
                 'description' => $description,
                 'category' => $event['timeline']
