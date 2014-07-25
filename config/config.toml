@@ -1,6 +1,6 @@
 [metadata]
 path = "/Siii/"
-homepage = "http://www.example.com/Siii/"
+homepage = "http://example.com/Siii/"
 title = "Siii Blog System"
 subtitle = "A damn light-weight system implemented with PHP."
 timezone = "Asia/Shanghai"
@@ -16,21 +16,15 @@ page = 43200  # 60 * 60 * 12 seconds
 feed = 5400  # 60 * 60 * 1.5 seconds
 
 [[timelines]]
-name = "雑七雑八"
-file = ["index.txt", "index.txt"]
+name = "口水茶"
+file = ["tweets/2013.txt", "tweets/2014.txt"]
 [[timelines]]
-name = "七雑八雑"
-file = "test.txt"
+name = "複製品"
+file = ["clone.txt"]
+[[timelines]]
+name = "道德經"
+file = "tao-te-ching.txt"
 [[timelines]]
 name = "關於"
 file = "about.txt"
 hidden = true  # hidden from homepage, not elsewhere (like feed.xml, categories, sitemap.xml)
-#[[timelines]]
-#name = "日常生活"
-#file = ["2013.txt", "2014.txt"]
-#[[timelines]]
-#name = "網絡風雲"
-#file = "web.txt"
-#[[timelines]]
-#name = "遊戲世界"
-#file = "game.txt"
