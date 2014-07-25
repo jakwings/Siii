@@ -10,7 +10,7 @@ echo <<<"EOT"
 EOT;
 foreach ($timelines as $timeline) {
     $text = $blog->EscapeHtml($timeline);
-    $slug = $blog->EscapeHtml(rawurlencode($timeline));
+    $slug = $blog->EscapeHtml($blog->EncodeUrl($timeline, TRUE));
     echo <<<"EOT"
 <li><a href="{$root}/category/{$slug}/">{$text}</a></li>
 EOT;

@@ -9,7 +9,7 @@ $events = $blog->GetEventsByPage($pagenum, NULL, $category);
 foreach ($events as $event) {
     $date = strftime('%Y-%m-%d', $event['time']);
     $title = $blog->EscapeHtml($event['title']);
-    $slug = $blog->EscapeHtml(rawurlencode($event['slug']));
+    $slug = $blog->EscapeHtml($blog->EncodeUrl($event['slug'], TRUE));
     $slug = $slug ? "{$root}/{$slug}.html" : '#';
     $timeline = $blog->EscapeHtml($event['timeline']);
     $description = $blog->ParseMarkup($event['content']);

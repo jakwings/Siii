@@ -2,12 +2,12 @@
 $slug = $data['slug'];
 $root = $blog->EscapeHtml(rtrim($blog->GetMetadata('path'), '/'));
 $homepage = $blog->EscapeHtml(rtrim($blog->GetMetadata('homepage'), '/'));
-$link = $blog->EscapeHtml("{$homepage}/" . rawurlencode($slug) . ".html");
+$link = $blog->EscapeHtml("{$homepage}/" . $blog->EncodeUrl($slug, TRUE) . ".html");
 $event = $blog->GetEventBySlug($slug);
 $date = strftime('%Y-%m-%d %H:%M%z', $event['time']);
 $title = $blog->EscapeHtml($event['title']);
 $timeline = $blog->EscapeHtml($event['timeline']);
-$link_timeline = $blog->EscapeHtml("{$root}/category/" . rawurlencode($event['timeline']) . '/');
+$link_timeline = $blog->EscapeHtml("{$root}/category/" . $blog->EncodeUrl($event['timeline'], TRUE) . '/');
 $source = $blog->GetEventContent($slug);
 $content = $blog->ParseMarkup($source);
 echo <<<"EOT"

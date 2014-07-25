@@ -3,7 +3,7 @@
 <?php
 $root = $blog->EscapeHtml(rtrim($blog->GetMetadata('path'), '/'));
 $category_escaped = $blog->EscapeHtml($blog->GetCategoryName() ?
-        ('category/' . rawurlencode($blog->GetCategoryName())) : 'page');
+        ('category/' . $blog->EncodeUrl($blog->GetCategoryName(), TRUE)) : 'page');
 $pagenum = $data['pagenum'];
 $pagemax = $data['pagemax'];
 if ($pagenum < $pagemax) {
