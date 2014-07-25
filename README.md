@@ -40,12 +40,12 @@ Siii/
              |- config.toml 以TOML 0.2爲語法的配置文件
     |- cmd_clear_cache      用於强制清空緩存的任意文件
     |- data/*               網頁所用的各種資源
-    |- database/*           數據據文件（文本格式）
+    |- database/*           數據庫文件（文本格式）
     |- favicon.ico          網站圖標
     |- feed.xml             博客的RSS/Atom訂閱文件（自動生成）
     |- files/*.md           各文章的Markdown源文件（Parsedown語法）
     |- index.php            一切頁面的入口
-    |- sitemap.xml          可提交給Google Webmaster站長工具（自動生成）
+    |- sitemap.xml          可提交給Google Web Master站長工具（自動生成）
     |- templates/*          網頁模板
     |- utils/*              核心文件，不解釋
 ```
@@ -53,3 +53,7 @@ Siii/
 ### 網頁主題模板太少？
 
 歡迎fork，歡迎通過提交issue分享你的傑作！不要求接口統一，但求個性與樂趣！
+
+### 爲何該系統如此簡陋？
+
+讓PHP菜鳥易上手DIY，不讓過早優化並模塊化扼殺簡單實用及個性。這東東多多少少面向沒錢租VPS的程序員，有儿女的話，不妨做個GUI管理工具，計劃培養下一代。:p
