@@ -9,7 +9,7 @@ class Siii
     private $mDirTemplates = 'templates';
     private $mMetadata = NULL;
     private $mTimelines = NULL;
-    private $mIsTimelinesOK = FALSE;
+    private $mIsTimelinesOk = FALSE;
     private $mSlug = '';
     private $mDB = NULL;
     private $mDbTableName = 'events';
@@ -210,14 +210,14 @@ class Siii
             $this->mCacheLifetimeForFeed = $config['cache']['lifetime']['feed'];
         }
         $this->mTimelines = $config['timelines'] ?: array();
-        $this->mIsTimelinesOK = FALSE;
+        $this->mIsTimelinesOk = FALSE;
         $this->mMetadata = $config['metadata'];
         date_default_timezone_set($this->mMetadata['timezone']);
     }
 
     public function _SetupTimelines($force = FALSE)
     {
-        if ($this->mIsTimelinesOK) {
+        if ($this->mIsTimelinesOk) {
             return;
         }
         $this->_ConnectDatabase();
@@ -225,7 +225,7 @@ class Siii
         // Check if table exists.
         if ($this->mDB->ListTables($table_name)) {
             if (!$force) {
-                $this->mIsTimelinesOK = TRUE;
+                $this->mIsTimelinesOk = TRUE;
                 return;
             }
         } else {
@@ -296,7 +296,7 @@ class Siii
         // Save events to database.
         $this->mDB->SetRecords($table_name, $events);
         $this->mDB->Update($table_name);
-        $this->mIsTimelinesOK = TRUE;
+        $this->mIsTimelinesOk = TRUE;
     }
 
     private function _CheckHtaccess()
