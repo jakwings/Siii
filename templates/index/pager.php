@@ -18,8 +18,7 @@ if ($pagenum > 1 and $pagenum <= $pagemax) {
     if ($pn_next > 1) {
         $link_next = "{$root}/{$category_escaped}/{$pn_next}/";
     } else {
-        $category = $blog->GetCategoryName() ?
-                ('category/' . $blog->GetCategoryName()) : 'page';
+        $category = $blog->GetCategoryName() ? $blog->GetCategoryName() : 'page';
         if ($category === 'page') {
             $link_next = "{$root}/";
         } else {
