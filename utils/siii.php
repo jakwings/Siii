@@ -277,19 +277,24 @@ class Siii
             foreach ($lines as $line) {
                 if ($line === '%') {
                     $is_header = TRUE;
-                    $event['content'] = implode("\n", $event['content']);
-                    $event['timeline'] = $timeline['name'];
-                    $event['hidden'] = !!$timeline['hidden'];
-                    $events[] = $event;
+                    if (!empty($event['headers'])) {
+                        $event['content'] = implode("\n", $event['content']);
+                        $event['timeline'] = $timeline['name'];
+                        $event['hidden'] = !!$timeline['hidden'];
+                        $events[] = $event;
+                    }
                     $event = array('content' => array());
                     continue;
                 }
                 if ($is_header) {
-                    $event['headers'] = mb_split('\s*//\s*', trim($line));
-                    $event['time'] = strtotime($event['headers'][0] ?: time());
-                    $event['title'] = strval($event['headers'][1]);
-                    $event['slug'] = strval($event['headers'][2]);
-                    $is_header = FALSE;
+                    $line = trim($line);
+                    if (!empty($line)) {
+                        $event['headers'] = mb_split('\s*//\s*', $line);
+                        $event['time'] = strtotime($event['headers'][0] ?: time());
+                        $event['title'] = strval($event['headers'][1]);
+                        $event['slug'] = strval($event['headers'][2]);
+                        $is_header = FALSE;
+                    }
                 } else {
                     $event['content'][] = $line;
                 }
