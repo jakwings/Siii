@@ -335,9 +335,9 @@ class Siii
             }
         ), TRUE);
         foreach ($events as $event) {
-          $date = $event['time'];
-          $link = $homepage . $this->EncodeUrl($event['slug'], TRUE) . '.html';
-          $sitemap->AddUrl($link, 'weekly', 0.9, $date);
+            $date = $event['time'];
+            $link = $homepage . $this->EncodeUrl($event['slug'], TRUE) . '.html';
+            $sitemap->AddUrl($link, 'weekly', 0.9, $date);
         }
         ignore_user_abort(TRUE);
         file_put_contents($mapfile, $sitemap->Fetch(), LOCK_EX);
