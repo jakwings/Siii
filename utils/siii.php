@@ -62,7 +62,7 @@ class Siii
         return $metadata;
     }
 
-    public function Render($data = NULL)
+    public function Render()
     {
         require_once 'siii-renderer.php';
         $this->_ConnectDatabase();
@@ -76,7 +76,7 @@ class Siii
         if ($this->mCacheEnabled) {
             $this->FindCache($blog);
         } else {
-            $this->mIsCacheReady = $blog->Render($data);
+            $this->mIsCacheReady = $blog->Render();
         }
     }
 
@@ -150,7 +150,7 @@ class Siii
         //$this->_StartCache();
         ob_clean();
         ob_start();
-        $this->mIsCacheReady = $blog->Render($data);
+        $this->mIsCacheReady = $blog->Render();
         if ($this->mIsCacheReady) {
             $buffer = ob_get_flush();
             ignore_user_abort(TRUE);
