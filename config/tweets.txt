@@ -1,0 +1,108 @@
+2014-07-24T14:29:30+0800 // 【碎語】新博客系統再次降臨
+
+今天正式入住 Cyan 提供的網絡空間。
+
+
+%
+2014-08-30T23:15:23+0800 // 【碎語】博客小改進
+
+針對文章分類和導航欄做了些重構式改進，下次再給「碎語」來點生氣吧。
+
+
+%
+2014-09-13T15:58:15+0800 // 【碎語】博文頁面生成
+
+自從有了 Kaj，按需加載頁面插件也輕便多了，MathJax 眞不該沒事都加載。
+
+
+%
+2014-09-18T00:33:32+0800 // 【碎語】C++？
+
+不知爲何覺得 C++ 沒以前那麼難看了，是心靜下來了嗎，還是我己經心如死灰？
+
+
+%
+2014-09-21T06:36:11+0800 // 【碎語】VIM 還是太複雜了……
+
+VIM 絕對是 (extended) regular expression 的天堂，和 jQuery 一樣極盡其能，感覺如同地獄，用 JavaScript 的 RegExp 練過不少匹配技巧還是不習慣。詳情：`:help regex`
+
+<figure><a rel="nofollow" href="http://xkcd.com/378/"><img src="^/qiniu/xkcd-0378.png" title="Real programmers set the universal constants at the start such that the universe evolves to contain the disk with the data they want." alt="XKCD[378]: Real Programmers"></a></figure>
+
+
+%
+2014-09-23T21:03:27+0800 // 【碎語】網頁瀏覧器腳本語言分裂中
+
+[ECMAScript]、[Dart]、[TypeScript]、[CoffeeScript]、[PureScript]……拿 ECMAScript 做 Assembly Language 眞的不好玩。
+
+[ECMAScript]: http://www.ecma-international.org/ecma-262/5.1/
+[Dart]: https://www.dartlang.org
+[TypeScript]: http://www.typescriptlang.org
+[CoffeeScript]: http://coffeescript.org
+[PureScript]: http://www.purescript.org
+
+
+%
+2014-09-24T20:14:48+0800 // 【碎語】博客主題更新
+
+又是一個新的開始。既然沒有美術妹子，那就讓自己變成美術<del>妹子</del><ins>愛好者</ins>。*該博客在 Mac OS 下可達最佳顯示效果，才發現用手機看也很爽耶……*
+
+
+%
+2014-09-25T21:22:36+0800 // 【碎語】SVG 習作——Chromera
+
+紀念一下 Opera 和 Chromium 的合體之旅……製作工具：[Inkscape](http://www.inkscape.org)
+
+<figure><img src="^/qiniu/chromera-1x.png" srcset="^/qiniu/chromera-1x.png 1.5x, ^/qiniu/chromera.png 2x" alt="Opera + Chromium = Chromera?"></figure>
+
+
+%
+2014-10-06T00:03:34+0800 // 【碎語】C++ 與苦命人
+
+學習 C++ 是必然的事……
+
+<figure><video controls width="636">
+  <source src="^/qiniu/20141005_01.mp4">
+  你的瀏覧器不支持 HTML5 Video。
+</video></figure>
+
+
+%
+2014-10-17T17:07:05+0800 // 【碎語】最討厭 Mac OS Yosemite 的 Dock 欄
+
+來張遺照，圖標質感的多樣性被毀了……只有你家的圖標有資格摆上去？！
+
+<figure><img src="^/qiniu/20141017_01-1x.png" srcset="^/qiniu/20141017_01-1x.png 1x, ^/qiniu/20141017_01.png 2x" alt="Wordless"></figure>
+
+Yosemite 已經基本配置好了，不過那界面對於我這經常不見桌面的人來說，似乎有點無聊了，那個 Dock 欄顏色多變時時讓我分心……
+
+
+%
+2014-10-19T16:44:47+0800 // 【碎語】這個遊戲火了……
+
+人性的考量又來了：[http://cursors.io]()
+
+不過這遊戲有個致命缺點——人越少越殘酷。
+
+
+%
+2014-10-24T22:22:41+0800 // 【碎語】Swift 眞是個很有野心的編程語言
+
+把基本教程看完了，開始來點練習吧。不過，剛升級系統後又被某個討厭的東西擺了我的 VIM 一道，去死吧！
+
+> ```bash
+> sudo chmod -x /usr/libexec/path_helper
+> ```
+
+試着重寫了一個 Objective-C 的 CLI 程序，發現運行速度快了好多，很可能是因爲以前亂寫的程序有內存洩漏吧，檢查了一下原來是指針越界了。
+
+（三天後用 Swift 重新實作了官方的 [TrackMix] 示例（Objective-C），少寫了很多代碼，只可惜以後要和 C++ 交互不容易……）
+
+[TrackMix]: https://developer.apple.com/Library/mac/referencelibrary/GettingStarted/RoadMapOSX/books/RM_YourFirstApp_Mac/Articles/Introduction.html
+
+
+%
+2014-11-27T21:33:51+0800 // 【碎語】靜心的方法？
+
+煩啊……
+
+<figure><a rel="nofollow" href="http://xkcd.com/571/"><img src="^/qiniu/xkcd-0571.png" title="If androids someday DO dream of electric sheep, don't forget to declare sheepCount as a long int." alt="XKCD[571]: Can't Sleep"></a></figure>

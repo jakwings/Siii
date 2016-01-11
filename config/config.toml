@@ -1,0 +1,42 @@
+[metadata]
+path = "/Siii"
+homepage = "https://example.com/"
+title = "Zero in One"
+subtitle = "and I find another zero in one…"
+timezone = "Asia/Shanghai"
+author = "Siii2"
+debug = false
+[metadata.license]
+text = "Creative Commons BY-NC-SA 4.0"
+link = "http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+
+[cache]
+enable = false  # true: 開啓緩存
+[cache.lifetime]
+page = 43200  # 60 * 60 * 12 seconds
+feed = 5400  # 60 * 60 * 1.5 seconds
+
+[[timelines]]
+name = "碎語"
+file = "tweets.txt"
+slug = "tweets"
+[[timelines]]
+name = "日記"
+dir = [ "2015", "2016" ]  # 位於 files/2015/ files/2016/ 的文章
+slug = "diary"
+[[timelines]]
+name = "碼呀碼呀"
+file = "leetcode.txt"
+slug = "coderun"
+mode = "collection"  # 專門一個分類，只在該分類中尋找其前後篇文章。
+[[timelines]]
+name = "匯總"
+file = [ "leetcode.txt" ]
+dir = [ "2015", "2016" ]
+slug = "archive"
+mode = "archive"  # 歸檔
+[[timelines]]
+name = "雜"
+file = "others.txt"
+slug = "others"
+mode = "hidden"  # 一些不明顯公開的特殊頁面。會顯示在 sitemap.xml 中。
