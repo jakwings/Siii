@@ -224,7 +224,7 @@ class Siii
         $headers['time'] = strtotime(strval($data[0])) ?: time();
         $headers['title'] = strval($data[1]);
         $headers['slug'] = strval($data[2]);
-        $headers['has_data'] = !trim(strval($data[3]));  // tricky
+        $headers['has_data'] = !!trim(strval($data[3]));  // tricky
         return $headers;
     }
 
