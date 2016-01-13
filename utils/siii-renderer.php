@@ -210,7 +210,7 @@ class Renderer
             return $event['slug'] === $slug;
         });
         if ($event['has_data']) {
-            $content = preg_replace('/\A.*?[\r\n]+%[\r\n]+/ms', '', $content);
+            $content = preg_replace('/^.*?[\r\n]+%[\r\n]+/s', '', $content);
         }
         return $content;
     }
