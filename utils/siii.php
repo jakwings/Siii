@@ -298,8 +298,8 @@ class Siii
                     foreach ($articles as $article) {
                         $slug = substr($article, strlen($this->mDirArticles), -3);
                         $lines = array_merge($lines, $this->_GetArticleFrontmatter($slug));
+                        $lines[] = '%';
                     }
-                    $lines[] = '%';
                 }
             }
             $event = array('content' => array());
